@@ -1,0 +1,29 @@
+{
+  "project": "AI vs Human Music Detector",
+  "production_notebook": "02_train_model.ipynb",
+  "dataset": "FINAL_ai_human_music_detector_dataset.csv",
+  "dataset_sha256": "59f6ca4fbae3ad510e2226dd865cbd6fa79649a13bb9612adae695e76fc97446",
+  "feature_count": 104,
+  "model_selection_split": "validation",
+  "final_evaluation_split": "test",
+  "selected_model": "Vote: LR+XGB+GB",
+  "selection_metric": "validation F1(AI), tie-break validation AUC and accuracy",
+  "validation_metrics": {
+    "accuracy": 0.9393939393939394,
+    "roc_auc": 0.9908172635445363,
+    "f1_ai": 0.9428571428571428
+  },
+  "test_metrics": {
+    "accuracy": 0.9393939393939394,
+    "roc_auc": 0.9871441689623508,
+    "precision_ai": 0.9142857142857143,
+    "recall_ai": 0.9696969696969697,
+    "f1_ai": 0.9411764705882353,
+    "false_positives": 3,
+    "false_negatives": 1
+  },
+  "random_state": 42,
+  "ai_threshold": 0.5,
+  "created_at": "2026-05-30T15:01:34",
+  "notes": "Model selected without using the test set; final artifact refit on train+validation and evaluated once on test."
+}
