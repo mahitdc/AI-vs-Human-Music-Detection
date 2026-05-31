@@ -349,7 +349,7 @@ with st.sidebar:
     selected = st.session_state.page
 
     st.markdown("---")
-    st.markdown('<p style="font-size:0.75rem;color:#4b5563;">Voting Ensemble · LR + XGB + GB<br>104 DSP Features · 440 Songs</p>', unsafe_allow_html=True)
+    st.markdown('<p style="font-size:0.75rem;color:#4b5563;">Voting Ensemble · Logistic Regression + XGBoost + Gradient Boosting<br>104 DSP Features · 440 Songs</p>', unsafe_allow_html=True)
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
@@ -613,7 +613,7 @@ elif selected == "🎵 Live Prediction":
 
         st.markdown("#### Technical Details")
         col_a, col_b = st.columns(2)
-        col_a.info("**Model:** Vote: LR + XGB + GB\n\n**Features:** 104\n\n**Chunk Size:** 5 seconds")
+        col_a.info("**Model:** Vote: Logistic Regression + XGBoost + Gradient Boosting\n\n**Features:** 104\n\n**Chunk Size:** 5 seconds")
         col_b.info("**Inference Method:** Probability Averaging\n\n**Min Duration:** 5 seconds\n\n**Sample Rate:** 22 050 Hz")
 
 
@@ -724,7 +724,7 @@ elif selected == "📊 Dataset & Model":
     col_m1, col_m2 = st.columns(2)
     with col_m1:
         st.markdown("""
-        **Selected Model:** `Vote: LR + XGB + GB`
+        **Selected Model:** `Vote: Logistic Regression + XGBoost + Gradient Boosting`
 
         The final model was selected using validation performance and then evaluated on a held-out test set.
         This approach prevents the test set from influencing model selection.
