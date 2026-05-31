@@ -62,7 +62,7 @@ def extract_features_from_audio(y, sr):
         "zcr_mean": np.mean(zcr),
         "zcr_var": np.var(zcr),
 
-        "tempo": float(tempo[0]),
+        "tempo": float(tempo[0]) if hasattr(tempo, '__len__') else float(tempo),
         "num_beats": len(beats),
 
         "dynamic_range": float(np.max(rms) - np.min(rms)),
